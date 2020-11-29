@@ -4,6 +4,12 @@
     <Filter Include="Source">
       <UniqueIdentifier>{13fc035a-6c87-4663-8d88-eaba9b3dbbdc}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\Public">
+      <UniqueIdentifier>{2e7292ab-d481-4861-8b4c-de8ed72b36f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Private">
+      <UniqueIdentifier>{6acdb89e-c4f2-411f-a42e-c47d46dac929}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\SimpleShooter.cpp">
