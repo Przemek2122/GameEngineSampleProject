@@ -5,7 +5,8 @@
     <GameEngineDir>E:\Repos\2DGameEngine</GameEngineDir>
   </PropertyGroup>
   <PropertyGroup>
-    <IncludePath>$(GameEngineDir)\Source\Private;$(GameEngineDir)\Source\Public;$(GameEngineDir)\Source;$(IncludePath)</IncludePath>
+    <IncludePath>$(ProjectDir)Source\Private;$(ProjectDir)Source\Public;$(ProjectDir)Source;$(IncludePath)</IncludePath>
+    <SourcePath>$(ProjectDir)Source;$(ProjectDir)Source\Public;$(ProjectDir)Source\Private;$(SourcePath)</SourcePath>
   </PropertyGroup>
   <ItemDefinitionGroup />
   <ItemGroup>

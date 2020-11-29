@@ -1,9 +1,11 @@
 // Main project class
 
 #include <GamePCH.h>
-#include <GameEngine.cpp>
+#include <GameEngine.h>
 
 int main(int argc, char* argv[])
 {
-    return StartGameEngine(argc, argv);
+    RunEngine<FEngine>(argc, argv);
+
+    return 0;
 }
