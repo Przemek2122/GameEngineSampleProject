@@ -114,7 +114,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
     <LibraryPath>$(ProjectDir)Debug;$(LibraryPath)</LibraryPath>
-    <IncludePath>$(GameEngineDir)/Source/Public/Core;$(GameEngineDir)/Source/Private/Core;$(GameEngineDir)/Source/Public;$(GameEngineDir)/Source/Private;$(GameEngineDir)/Source;$(ProjectDir)Source\Private;$(ProjectDir)Source\Public;$(ProjectDir)Source;$(IncludePath);$(IncludePath)</IncludePath>
+    <IncludePath>$(GameEngineDir)/Source/Public/Containers;$(GameEngineDir)/Source/Private/Containers;$(GameEngineDir)/Source/Public/Core;$(GameEngineDir)/Source/Private/Core;$(GameEngineDir)/Source/Public;$(GameEngineDir)/Source/Private;$(GameEngineDir)/Source;$(ProjectDir)Source\Private;$(ProjectDir)Source\Public;$(ProjectDir)Source;$(IncludePath);$(IncludePath)</IncludePath>
     <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
     <IntDir>$(Platform)\$(Configuration)\</IntDir>
     <ReferencePath>$(ReferencePath)</ReferencePath>
@@ -122,33 +122,33 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
     <LinkIncremental>true</LinkIncremental>
     <LibraryPath>$(ProjectDir)Debug;$(LibraryPath)</LibraryPath>
-    <IncludePath>$(GameEngineDir)/Source/Public/Core;$(GameEngineDir)/Source/Private/Core;$(GameEngineDir)/Source/Public;$(GameEngineDir)/Source/Private;$(GameEngineDir)/Source;$(ProjectDir)Source\Private;$(ProjectDir)Source\Public;$(ProjectDir)Source;$(IncludePath);$(IncludePath)</IncludePath>
+    <IncludePath>$(GameEngineDir)/Source/Public/Containers;$(GameEngineDir)/Source/Private/Containers;$(GameEngineDir)/Source/Public/Core;$(GameEngineDir)/Source/Private/Core;$(GameEngineDir)/Source/Public;$(GameEngineDir)/Source/Private;$(GameEngineDir)/Source;$(ProjectDir)Source\Private;$(ProjectDir)Source\Public;$(ProjectDir)Source;$(IncludePath);$(IncludePath)</IncludePath>
     <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
     <IntDir>$(Platform)\$(Configuration)\</IntDir>
     <ReferencePath>$(ReferencePath)</ReferencePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>$(GameEngineDir)/Source/Public/Core;$(GameEngineDir)/Source/Private/Core;$(GameEngineDir)/Source/Public;$(GameEngineDir)/Source/Private;$(GameEngineDir)/Source;$(ProjectDir)Source\Private;$(ProjectDir)Source\Public;$(ProjectDir)Source;$(IncludePath);$(IncludePath)</IncludePath>
+    <IncludePath>$(GameEngineDir)/Source/Public/Containers;$(GameEngineDir)/Source/Private/Containers;$(GameEngineDir)/Source/Public/Core;$(GameEngineDir)/Source/Private/Core;$(GameEngineDir)/Source/Public;$(GameEngineDir)/Source/Private;$(GameEngineDir)/Source;$(ProjectDir)Source\Private;$(ProjectDir)Source\Public;$(ProjectDir)Source;$(IncludePath);$(IncludePath)</IncludePath>
     <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
     <IntDir>$(Platform)\$(Configuration)\</IntDir>
     <ReferencePath>$(ReferencePath)</ReferencePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>$(GameEngineDir)/Source/Public/Core;$(GameEngineDir)/Source/Private/Core;$(GameEngineDir)/Source/Public;$(GameEngineDir)/Source/Private;$(GameEngineDir)/Source;$(ProjectDir)Source\Private;$(ProjectDir)Source\Public;$(ProjectDir)Source;$(IncludePath);$(IncludePath)</IncludePath>
+    <IncludePath>$(GameEngineDir)/Source/Public/Containers;$(GameEngineDir)/Source/Private/Containers;$(GameEngineDir)/Source/Public/Core;$(GameEngineDir)/Source/Private/Core;$(GameEngineDir)/Source/Public;$(GameEngineDir)/Source/Private;$(GameEngineDir)/Source;$(ProjectDir)Source\Private;$(ProjectDir)Source\Public;$(ProjectDir)Source;$(IncludePath);$(IncludePath)</IncludePath>
     <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
     <IntDir>$(Platform)\$(Configuration)\</IntDir>
     <ReferencePath>$(ReferencePath)</ReferencePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(GameEngineDir)/Source/Public/Core;$(GameEngineDir)/Source/Private/Core;$(GameEngineDir)/Source/Public;$(GameEngineDir)/Source/Private;$(GameEngineDir)/Source;$(IncludePath);$(IncludePath)</IncludePath>
+    <IncludePath>$(GameEngineDir)/Source/Public/Containers;$(GameEngineDir)/Source/Private/Containers;$(GameEngineDir)/Source/Public/Core;$(GameEngineDir)/Source/Private/Core;$(GameEngineDir)/Source/Public;$(GameEngineDir)/Source/Private;$(GameEngineDir)/Source;$(IncludePath);$(IncludePath)</IncludePath>
     <LibraryPath>$(ProjectDir)x64\Debug;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>$(GameEngineDir)/Source/Public/Core;$(GameEngineDir)/Source/Private/Core;$(GameEngineDir)/Source/Public;$(GameEngineDir)/Source/Private;$(GameEngineDir)/Source;$(ProjectDir)Source\Private;$(ProjectDir)Source\Public;$(ProjectDir)Source;$(IncludePath);$(IncludePath)</IncludePath>
+    <IncludePath>$(GameEngineDir)/Source/Public/Containers;$(GameEngineDir)/Source/Private/Containers;$(GameEngineDir)/Source/Public/Core;$(GameEngineDir)/Source/Private/Core;$(GameEngineDir)/Source/Public;$(GameEngineDir)/Source/Private;$(GameEngineDir)/Source;$(ProjectDir)Source\Private;$(ProjectDir)Source\Public;$(ProjectDir)Source;$(IncludePath);$(IncludePath)</IncludePath>
     <LibraryPath>$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(ProjectDir)x64\Release;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
