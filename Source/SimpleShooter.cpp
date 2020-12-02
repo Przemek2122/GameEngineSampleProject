@@ -1,11 +1,12 @@
 // Main project class
 
 #include <GamePCH.h>
-#include <GameEngine.h>
+#include <EngineMain.h>
+#include "ShooterGameEngine.h"
 
 int main(int argc, char* argv[])
 {
-    RunEngine<FEngine>(argc, argv);
+    RunEngine<FShooterGameEngine>(argc, argv);
 
     return 0;
 }
