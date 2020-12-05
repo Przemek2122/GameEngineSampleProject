@@ -2,7 +2,7 @@
 
 #include <GamePCH.h>
 #include <EngineMain.h>
-#include "ShooterGameEngine.h"
+#include "Core/ShooterGameEngine.h"
 
 int main(int argc, char* argv[])
 {
