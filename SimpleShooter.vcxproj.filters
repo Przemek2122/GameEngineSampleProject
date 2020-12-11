@@ -24,6 +24,9 @@
     <ClCompile Include="Source\Private\Core\ShooterGameEngine.cpp">
       <Filter>Source\Private\Core</Filter>
     </ClCompile>
+    <ClCompile Include="Source\GamePCH.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\GamePCH.h">

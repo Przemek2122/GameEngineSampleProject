@@ -1,9 +1,9 @@
 //
 
 #include "GamePCH.h"
-#include "Engine.PCH.h"
-#include "..\..\Public\Core\ShooterGameEngine.h"
-#include <Render/Window.h>
+#include "CoreEngine.h"
+#include "Core/ShooterGameEngine.h"
+#include "Renderer/Window.h"
 
 FShooterGameEngine::FShooterGameEngine()
 {
