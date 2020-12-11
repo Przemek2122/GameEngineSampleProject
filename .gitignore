@@ -21,3 +21,5 @@ ARM/
 
 #Ignore log
 log/
+.vs/SimpleShooter/v16/Browse.VC.db
+.vs/SimpleShooter/v16/.suo
