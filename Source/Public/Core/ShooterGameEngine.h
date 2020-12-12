@@ -11,7 +11,12 @@ public:
 	FShooterGameEngine();
 	virtual ~FShooterGameEngine();
 
-	virtual void GameInit() override;
+	virtual void PreInit() override;
+	virtual void Init() override;
+	virtual void PostInit() override;
+
+	virtual void Tick() override;
+
 
 protected:
 	FWindow* GameWindow;
