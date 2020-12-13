@@ -16,6 +16,7 @@ public:
 	virtual void PostInit() override;
 
 	virtual void Tick() override;
+	virtual void PostSecondTick() override;
 
 
 protected:

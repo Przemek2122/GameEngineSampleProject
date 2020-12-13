@@ -41,7 +41,12 @@ void FShooterGameEngine::PostInit()
 
 void FShooterGameEngine::Tick()
 {
-	LOG_DEBUG("Game Tick" << " " << SDL_GetTicks());
+	//LOG_DEBUG("Game Tick" << " " << SDL_GetTicks());
+}
+
+void FShooterGameEngine::PostSecondTick()
+{
+	//LOG_DEBUG("Game Tick" << " " << GetFramesThisSecond());
 }
 
 
