@@ -7,10 +7,13 @@
 
 class FShooterGameEngine : public FEngine
 {
-public:
-	FShooterGameEngine();
-	virtual ~FShooterGameEngine();
+	friend FEngineManager;
 
+protected:
+	FShooterGameEngine();
+	virtual ~FShooterGameEngine() override;
+
+public:
 	virtual void PreInit() override;
 	virtual void Init() override;
 	virtual void PostInit() override;

@@ -6,23 +6,14 @@
 #include "Core/ShooterGameEngine.h"
 
 FShooterGameEngine::FShooterGameEngine()
+	: GameWindow(nullptr)
 {
-	GameWindow = new FWindow((char*)"Game window", 200, 200, 800, 600, SDL_WINDOW_RESIZABLE);
-
-	if (GetEngine() != nullptr || Engine != nullptr)
-	{
-		LOG_DEBUG("Engine pointer is valid. Adress: " << GetEngine());
-		LOG_DEBUG("Engine pointer is valid. Adress: " << Engine);
-	}
-	else
-	{
-		LOG_DEBUG("Engine pointer is invalid. Adress: " << GetEngine());
-		LOG_DEBUG("Engine pointer is invalid. Adress: " << Engine);
-	}
 }
 
 FShooterGameEngine::~FShooterGameEngine()
 {
+	Engine->GetEngineRender()->RemoveWindow(GameWindow);
+	
 	delete GameWindow;
 }
 
@@ -33,6 +24,10 @@ void FShooterGameEngine::PreInit()
 void FShooterGameEngine::Init()
 {
 	LOG_DEBUG("Game init");
+
+	GameWindow = new FWindow(TEXT("Game window"), 200, 200, 800, 600, SDL_WINDOW_RESIZABLE);
+
+	Engine->GetEngineRender()->AddWindow(GameWindow);
 }
 
 void FShooterGameEngine::PostInit()
@@ -48,5 +43,3 @@ void FShooterGameEngine::PostSecondTick()
 {
 	//LOG_DEBUG("Game Tick" << " " << GetFramesThisSecond());
 }
-
-
