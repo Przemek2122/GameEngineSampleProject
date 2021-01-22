@@ -1,9 +1,8 @@
 //
 
 #include "GamePCH.h"
-#include "CoreEngine.h"
-#include "Includes/Statics.h"
 #include "Core/ShooterGameEngine.h"
+#include "Renderer/Widgets/Samples/MouseSparkWidget.h"
 
 FShooterGameEngine::FShooterGameEngine()
 	: GameWindow(nullptr)
@@ -25,9 +24,15 @@ void FShooterGameEngine::Init()
 {
 	LOG_DEBUG("Game init");
 
-	GameWindow = new FWindow(TEXT("Game window"), 200, 200, 800, 600, SDL_WINDOW_RESIZABLE);
+	GameWindow = new FWindow(TEXT("Game window"), 200, 200, 800, 600);
+	if (GameWindow != nullptr)
+	{
+		// Register window to engine so it's updated
+		Engine->GetEngineRender()->AddWindow(GameWindow);
 
-	Engine->GetEngineRender()->AddWindow(GameWindow);
+		// Add sample widget
+		GameWindow->GetWidgetManager()->CreateWidget<FMouseSparkWidget>("TestSparkWidget");
+	}
 }
 
 void FShooterGameEngine::PostInit()
@@ -41,5 +46,5 @@ void FShooterGameEngine::Tick()
 
 void FShooterGameEngine::PostSecondTick()
 {
-	//LOG_DEBUG("Game Tick" << " " << GetFramesThisSecond());
+	LOG_DEBUG("Game Tick" << " " << GetFramesThisSecond());
 }

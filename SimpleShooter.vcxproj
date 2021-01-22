@@ -39,6 +39,7 @@
     <ClCompile Include="Source\SimpleShooter.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\2DGameEngine\Source\Public\Containers\ContainerBase.h" />
     <ClInclude Include="Source\GamePCH.h" />
     <ClInclude Include="Source\Public\Core\ShooterGameEngine.h" />
   </ItemGroup>
@@ -125,7 +126,7 @@
     <IncludePath>$(ProjectDir)Source\Private;$(ProjectDir)Source\Public;$(GameEngineDir)/Source/Public/Containers;$(GameEngineDir)/Source/Private/Containers;$(GameEngineDir)/Source/Public/Core;$(GameEngineDir)/Source/Private/Core;$(GameEngineDir)/Source/Public;$(GameEngineDir)/Source/Private;$(GameEngineDir)/Source;$(ProjectDir)Source\Private;$(ProjectDir)Source\Public;$(ProjectDir)Source;$(IncludePath);$(IncludePath)</IncludePath>
     <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
     <IntDir>$(Platform)\$(Configuration)\</IntDir>
-    <ReferencePath>$(ReferencePath)</ReferencePath>
+    <ReferencePath>$(GameEngineDir)/Source;$(ReferencePath)</ReferencePath>
     <PublicIncludeDirectories>$(ProjectDir)Source;$(ProjectDir)Source\Private;$(ProjectDir)Source\Public;$(PublicIncludeDirectories)</PublicIncludeDirectories>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
@@ -134,24 +135,24 @@
     <IncludePath>$(ProjectDir)Source\Private;$(ProjectDir)Source\Public;$(GameEngineDir)/Source/Public/Containers;$(GameEngineDir)/Source/Private/Containers;$(GameEngineDir)/Source/Public/Core;$(GameEngineDir)/Source/Private/Core;$(GameEngineDir)/Source/Public;$(GameEngineDir)/Source/Private;$(GameEngineDir)/Source;$(ProjectDir)Source\Private;$(ProjectDir)Source\Public;$(ProjectDir)Source;$(IncludePath);$(IncludePath)</IncludePath>
     <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
     <IntDir>$(Platform)\$(Configuration)\</IntDir>
-    <ReferencePath>$(ReferencePath)</ReferencePath>
+    <ReferencePath>$(GameEngineDir)/Source;$(ReferencePath)</ReferencePath>
     <PublicIncludeDirectories>$(ProjectDir)Source;$(ProjectDir)Source\Private;$(ProjectDir)Source\Public;$(PublicIncludeDirectories)</PublicIncludeDirectories>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <LinkIncremental>false</LinkIncremental>
+    <LinkIncremental>true</LinkIncremental>
     <IncludePath>$(ProjectDir)Source\Private;$(ProjectDir)Source\Public;$(GameEngineDir)/Source/Public/Containers;$(GameEngineDir)/Source/Private/Containers;$(GameEngineDir)/Source/Public/Core;$(GameEngineDir)/Source/Private/Core;$(GameEngineDir)/Source/Public;$(GameEngineDir)/Source/Private;$(GameEngineDir)/Source;$(ProjectDir)Source\Private;$(ProjectDir)Source\Public;$(ProjectDir)Source;$(IncludePath);$(IncludePath)</IncludePath>
     <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
     <IntDir>$(Platform)\$(Configuration)\</IntDir>
-    <ReferencePath>$(ReferencePath)</ReferencePath>
+    <ReferencePath>$(GameEngineDir)/Source;$(ReferencePath)</ReferencePath>
     <LibraryPath>$(ProjectDir)$(Platform)\Release;$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86)</LibraryPath>
     <PublicIncludeDirectories>$(ProjectDir)Source;$(ProjectDir)Source\Private;$(ProjectDir)Source\Public;$(PublicIncludeDirectories)</PublicIncludeDirectories>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
-    <LinkIncremental>false</LinkIncremental>
+    <LinkIncremental>true</LinkIncremental>
     <IncludePath>$(ProjectDir)Source\Private;$(ProjectDir)Source\Public;$(GameEngineDir)/Source/Public/Containers;$(GameEngineDir)/Source/Private/Containers;$(GameEngineDir)/Source/Public/Core;$(GameEngineDir)/Source/Private/Core;$(GameEngineDir)/Source/Public;$(GameEngineDir)/Source/Private;$(GameEngineDir)/Source;$(ProjectDir)Source\Private;$(ProjectDir)Source\Public;$(ProjectDir)Source;$(IncludePath);$(IncludePath)</IncludePath>
     <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
     <IntDir>$(Platform)\$(Configuration)\</IntDir>
-    <ReferencePath>$(ReferencePath)</ReferencePath>
+    <ReferencePath>$(GameEngineDir)/Source;$(ReferencePath)</ReferencePath>
     <PublicIncludeDirectories>$(ProjectDir)Source;$(ProjectDir)Source\Private;$(ProjectDir)Source\Public;$(PublicIncludeDirectories)</PublicIncludeDirectories>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -159,12 +160,14 @@
     <IncludePath>$(ProjectDir)Source\Private;$(ProjectDir)Source\Public;$(GameEngineDir)/Source/Public/Containers;$(GameEngineDir)/Source/Private/Containers;$(GameEngineDir)/Source/Public/Core;$(GameEngineDir)/Source/Private/Core;$(GameEngineDir)/Source/Public;$(GameEngineDir)/Source/Private;$(GameEngineDir)/Source;$(IncludePath);$(IncludePath)</IncludePath>
     <LibraryPath>$(ProjectDir)x64\Debug;$(LibraryPath)</LibraryPath>
     <PublicIncludeDirectories>$(ProjectDir)Source;$(ProjectDir)Source\Private;$(ProjectDir)Source\Public;$(PublicIncludeDirectories)</PublicIncludeDirectories>
+    <ReferencePath>$(GameEngineDir)/Source;$(VC_ReferencesPath_x64);</ReferencePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <LinkIncremental>false</LinkIncremental>
+    <LinkIncremental>true</LinkIncremental>
     <IncludePath>$(ProjectDir)Source\Private;$(ProjectDir)Source\Public;$(GameEngineDir)/Source/Public/Containers;$(GameEngineDir)/Source/Private/Containers;$(GameEngineDir)/Source/Public/Core;$(GameEngineDir)/Source/Private/Core;$(GameEngineDir)/Source/Public;$(GameEngineDir)/Source/Private;$(GameEngineDir)/Source;$(ProjectDir)Source\Private;$(ProjectDir)Source\Public;$(ProjectDir)Source;$(IncludePath);$(IncludePath)</IncludePath>
     <LibraryPath>$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(ProjectDir)x64\Release;$(LibraryPath)</LibraryPath>
     <PublicIncludeDirectories>$(ProjectDir)Source;$(ProjectDir)Source\Private;$(ProjectDir)Source\Public;$(PublicIncludeDirectories)</PublicIncludeDirectories>
+    <ReferencePath>$(GameEngineDir)/Source;$(VC_ReferencesPath_x64);</ReferencePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -180,12 +183,15 @@
       <CompileAsManaged>false</CompileAsManaged>
       <CompileAsWinRT>false</CompileAsWinRT>
       <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalOptions>"Libs\SDL\x86\*.dll" "Libs\SDL_Image\x86\*.dll" "Libs\SDL_Mixer\x86\*.dll" "Libs\SDL_TTF\x86\*.dll" %(AdditionalOptions)</AdditionalOptions>
       <AdditionalDependencies>GameEngine.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
     </Link>
     <PostBuildEvent>
       <Command>call $(GameEngineDir)\BuildActions\PostBuild\CopyDLLs.bat $(GameEngineDir)\Libs\ $(SolutionDir)$(Platform)\$(Configuration)\ x86</Command>
@@ -205,12 +211,15 @@
       <CompileAsManaged>false</CompileAsManaged>
       <CompileAsWinRT>false</CompileAsWinRT>
       <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalOptions>"Libs\SDL\x86\*.dll" "Libs\SDL_Image\x86\*.dll" "Libs\SDL_Mixer\x86\*.dll" "Libs\SDL_TTF\x86\*.dll" %(AdditionalOptions)</AdditionalOptions>
       <AdditionalDependencies>GameEngine.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
     </Link>
     <PostBuildEvent>
       <Command>call $(GameEngineDir)\BuildActions\PostBuild\CopyDLLs.bat '$(GameEngineDir)' '$(ProjectDir)' ''</Command>
@@ -234,6 +243,7 @@
       <SupportJustMyCode>false</SupportJustMyCode>
       <CompileAsWinRT>false</CompileAsWinRT>
       <Optimization>Disabled</Optimization>
+      <CompileAs>Default</CompileAs>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -242,6 +252,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalOptions>"Libs\SDL\x86\*.dll" "Libs\SDL_Image\x86\*.dll" "Libs\SDL_Mixer\x86\*.dll" "Libs\SDL_TTF\x86\*.dll" %(AdditionalOptions)</AdditionalOptions>
       <AdditionalDependencies>GameEngine.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
     </Link>
     <PostBuildEvent>
       <Command>call $(GameEngineDir)\BuildActions\PostBuild\CopyDLLs.bat $(GameEngineDir)\Libs\ $(SolutionDir)$(Platform)\$(Configuration)\ x86</Command>
@@ -265,6 +276,7 @@
       <SupportJustMyCode>true</SupportJustMyCode>
       <CompileAsWinRT>false</CompileAsWinRT>
       <Optimization>Disabled</Optimization>
+      <CompileAs>Default</CompileAs>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -273,6 +285,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalOptions>"Libs\SDL\x86\*.dll" "Libs\SDL_Image\x86\*.dll" "Libs\SDL_Mixer\x86\*.dll" "Libs\SDL_TTF\x86\*.dll" %(AdditionalOptions)</AdditionalOptions>
       <AdditionalDependencies>GameEngine.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
     </Link>
     <PostBuildEvent>
       <Command>call $(GameEngineDir)\BuildActions\PostBuild\CopyDLLs.bat '$(GameEngineDir)' '$(ProjectDir)' ''</Command>
@@ -292,13 +305,15 @@
       <CompileAsManaged>false</CompileAsManaged>
       <CompileAsWinRT>false</CompileAsWinRT>
       <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>GameEngine.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions> %(AdditionalOptions)</AdditionalOptions>
-      <LinkTimeCodeGeneration>Default</LinkTimeCodeGeneration>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
     <PostBuildEvent>
@@ -323,6 +338,7 @@
       <SupportJustMyCode>true</SupportJustMyCode>
       <CompileAsWinRT>false</CompileAsWinRT>
       <Optimization>Disabled</Optimization>
+      <CompileAs>Default</CompileAs>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -330,7 +346,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalOptions> %(AdditionalOptions)</AdditionalOptions>
-      <LinkTimeCodeGeneration>Default</LinkTimeCodeGeneration>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
       <AdditionalDependencies>GameEngine.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <ManifestResourceCompile>

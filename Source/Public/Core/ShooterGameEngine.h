@@ -3,7 +3,6 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "Core\Engine.h"
 
 class FShooterGameEngine : public FEngine
 {

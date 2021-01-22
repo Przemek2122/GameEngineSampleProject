@@ -35,5 +35,8 @@
     <ClInclude Include="Source\Public\Core\ShooterGameEngine.h">
       <Filter>Source\Public\Core</Filter>
     </ClInclude>
+    <ClInclude Include="..\2DGameEngine\Source\Public\Containers\ContainerBase.h">
+      <Filter>Source\Private</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
