@@ -12,8 +12,6 @@ FShooterGameEngine::FShooterGameEngine()
 FShooterGameEngine::~FShooterGameEngine()
 {
 	Engine->GetEngineRender()->RemoveWindow(GameWindow);
-	
-	delete GameWindow;
 }
 
 void FShooterGameEngine::PreInit()
@@ -41,7 +39,6 @@ void FShooterGameEngine::PostInit()
 
 void FShooterGameEngine::Tick()
 {
-	//LOG_DEBUG("Game Tick" << " " << SDL_GetTicks());
 }
 
 void FShooterGameEngine::PostSecondTick()

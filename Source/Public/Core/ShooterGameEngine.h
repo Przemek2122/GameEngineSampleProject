@@ -20,7 +20,6 @@ public:
 	virtual void Tick() override;
 	virtual void PostSecondTick() override;
 
-
 protected:
 	FWindow* GameWindow;
 };
