@@ -1,4 +1,4 @@
-//
+// Created by Przemys³aw Wiewióra 2020
 
 #include "GamePCH.h"
 #include "Core/ShooterGameEngine.h"
@@ -43,5 +43,6 @@ void FShooterGameEngine::Tick()
 
 void FShooterGameEngine::PostSecondTick()
 {
-	LOG_DEBUG("Game Tick" << " " << GetFramesThisSecond());
+	// Test print ticks per second
+	//LOG_DEBUG("Game Tick" << " " << GetFramesThisSecond());
 }
