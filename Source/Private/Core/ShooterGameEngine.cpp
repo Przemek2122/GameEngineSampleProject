@@ -2,6 +2,8 @@
 
 #include "GamePCH.h"
 #include "Core/ShooterGameEngine.h"
+
+#include "Renderer/Widgets/Samples/ButtonWidget.h"
 #include "Renderer/Widgets/Samples/MouseSparkWidget.h"
 
 FShooterGameEngine::FShooterGameEngine()
@@ -30,6 +32,7 @@ void FShooterGameEngine::Init()
 
 		// Add sample widget
 		GameWindow->GetWidgetManager()->CreateWidget<FMouseSparkWidget>("TestSparkWidget");
+		GameWindow->GetWidgetManager()->CreateWidget<FButtonWidget>("TestButton");
 	}
 }
 
