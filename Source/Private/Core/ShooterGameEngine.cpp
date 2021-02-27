@@ -32,9 +32,10 @@ void FShooterGameEngine::Init()
 		Engine->GetEngineRender()->AddWindow(GameWindow);
 
 		// Add sample widget
-		GameWindow->GetWidgetManager()->CreateWidget<FMouseSparkWidget>("TestSparkWidget");
-		GameWindow->GetWidgetManager()->CreateWidget<FButtonWidget>("TestButton");
-		FTextWidget* TextWidget = GameWindow->GetWidgetManager()->CreateWidget<FTextWidget>("TextWidget");
+		FMouseSparkWidget* MouseSparkWidget = GameWindow->GetWidgetManager()->CreateWidget<FMouseSparkWidget>("TestSparkWidget");
+		FButtonWidget* ButtonWidget = GameWindow->GetWidgetManager()->CreateWidget<FButtonWidget>("TestButton");
+		//ButtonWidget->SetWidgetLocationRelative({50, 60});
+		FTextWidget* TextWidget = ButtonWidget->CreateWidget<FTextWidget>("TextWidget");
 		TextWidget->SetText("Test text");
 	}
 }
