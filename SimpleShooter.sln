@@ -8,7 +8,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SimpleShooter", "SimpleShoo
 		{44805F8A-1665-4354-98BC-0A532019DA4C} = {44805F8A-1665-4354-98BC-0A532019DA4C}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GameEngine", "..\2DGameEngine\GameEngine.vcxproj", "{44805F8A-1665-4354-98BC-0A532019DA4C}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GameEngine", "..\GameEngine\GameEngine.vcxproj", "{44805F8A-1665-4354-98BC-0A532019DA4C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

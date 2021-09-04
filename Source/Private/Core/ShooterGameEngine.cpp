@@ -6,6 +6,7 @@
 #include "Renderer/Widgets/Samples/ButtonWidget.h"
 #include "Renderer/Widgets/Samples/MouseSparkWidget.h"
 #include "Renderer/Widgets/Samples/TextWidget.h"
+#include "Renderer/Widgets/Samples/VerticalBoxWidget.h"
 
 FShooterGameEngine::FShooterGameEngine()
 	: GameWindow(nullptr)
@@ -33,9 +34,19 @@ void FShooterGameEngine::Init()
 
 		// Add sample widget
 		FMouseSparkWidget* MouseSparkWidget = GameWindow->GetWidgetManager()->CreateWidget<FMouseSparkWidget>("TestSparkWidget", 100);
+
 		FButtonWidget* ButtonWidget = GameWindow->GetWidgetManager()->CreateWidget<FButtonWidget>("TestButton");
 		FTextWidget* TextWidget = ButtonWidget->CreateWidget<FTextWidget>("TextWidget");
 		TextWidget->SetText("Test button 1_123456789, 2_123456789");
+		ButtonWidget->AddChild(TextWidget);
+
+		FButtonWidget* ButtonWidget2 = GameWindow->GetWidgetManager()->CreateWidget<FButtonWidget>("TestButton2");
+		
+
+		FVerticalBoxWidget* VerticalBoxWidget = GameWindow->GetWidgetManager()->CreateWidget<FVerticalBoxWidget>("TestVerticalBoxWidget");
+		VerticalBoxWidget->SetWidgetLocationRelative({0, 0});
+		VerticalBoxWidget->SetWidgetSize({200, 200}, false);
+		VerticalBoxWidget->AddChild(ButtonWidget);
 	}
 }
 
