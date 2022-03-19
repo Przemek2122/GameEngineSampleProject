@@ -12,6 +12,7 @@
   <ItemGroup>
     <BuildMacro Include="GameEngineDir">
       <Value>$(GameEngineDir)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
     </BuildMacro>
   </ItemGroup>
 </Project>

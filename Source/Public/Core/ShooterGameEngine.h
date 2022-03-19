@@ -4,21 +4,23 @@
 
 #include "CoreMinimal.h"
 
-class FShooterGameEngine : public FEngine
+LIBRARY_API class FShooterGameEngine : public FEngine
 {
 	friend FEngineManager;
 
 protected:
 	FShooterGameEngine();
-	virtual ~FShooterGameEngine() override;
 
 public:
-	virtual void PreInit() override;
-	virtual void Init() override;
-	virtual void PostInit() override;
+	void PreInit() override;
+	void Init() override;
+	void PostInit() override;
 
-	virtual void Tick() override;
-	virtual void PostSecondTick() override;
+	void Tick() override;
+	void PostSecondTick() override;
+
+	void MakeWidgets();
+	void MakeEntities();
 
 protected:
 	FWindow* GameWindow;

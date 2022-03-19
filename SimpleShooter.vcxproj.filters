@@ -18,13 +18,16 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Source\SimpleShooter.cpp">
+    <ClCompile Include="Source\Project.cpp">
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="Source\Private\Core\ShooterGameEngine.cpp">
       <Filter>Source\Private\Core</Filter>
     </ClCompile>
     <ClCompile Include="Source\GamePCH.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\dllmain.cpp">
       <Filter>Source</Filter>
     </ClCompile>
   </ItemGroup>
@@ -34,9 +37,6 @@
     </ClInclude>
     <ClInclude Include="Source\Public\Core\ShooterGameEngine.h">
       <Filter>Source\Public\Core</Filter>
-    </ClInclude>
-    <ClInclude Include="..\2DGameEngine\Source\Public\Containers\ContainerBase.h">
-      <Filter>Source\Private</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

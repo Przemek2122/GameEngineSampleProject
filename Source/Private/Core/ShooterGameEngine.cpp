@@ -1,4 +1,4 @@
-// Created by Przemys³aw Wiewióra 2020
+// Created by Przemys³aw Wiewióra 2020-2022 https://github.com/Przemek2122/GameEngine
 
 #include "GamePCH.h"
 #include "Core/ShooterGameEngine.h"
@@ -13,11 +13,6 @@ FShooterGameEngine::FShooterGameEngine()
 {
 }
 
-FShooterGameEngine::~FShooterGameEngine()
-{
-	Engine->GetEngineRender()->RemoveWindow(GameWindow);
-}
-
 void FShooterGameEngine::PreInit()
 {
 }
@@ -26,27 +21,12 @@ void FShooterGameEngine::Init()
 {
 	LOG_DEBUG("Game init");
 
-	GameWindow = new FWindow(TEXT("Game window"), 200, 200, 800, 600);
+	GameWindow = Engine->GetEngineRender()->CreateWindow<FWindow>(TEXT_CHAR("Game window"), 200, 200, 800, 600);
 	if (GameWindow != nullptr)
 	{
-		// Register window to engine so it's updated
-		Engine->GetEngineRender()->AddWindow(GameWindow);
+		MakeWidgets();
 
-		// Add sample widget
-		FMouseSparkWidget* MouseSparkWidget = GameWindow->GetWidgetManager()->CreateWidget<FMouseSparkWidget>("TestSparkWidget", 100);
-
-		FButtonWidget* ButtonWidget = GameWindow->GetWidgetManager()->CreateWidget<FButtonWidget>("TestButton");
-		FTextWidget* TextWidget = ButtonWidget->CreateWidget<FTextWidget>("TextWidget");
-		TextWidget->SetText("Test button 1_123456789, 2_123456789");
-		ButtonWidget->AddChild(TextWidget);
-
-		FButtonWidget* ButtonWidget2 = GameWindow->GetWidgetManager()->CreateWidget<FButtonWidget>("TestButton2");
-		
-
-		FVerticalBoxWidget* VerticalBoxWidget = GameWindow->GetWidgetManager()->CreateWidget<FVerticalBoxWidget>("TestVerticalBoxWidget");
-		VerticalBoxWidget->SetWidgetLocationRelative({0, 0});
-		VerticalBoxWidget->SetWidgetSize({200, 200}, false);
-		VerticalBoxWidget->AddChild(ButtonWidget);
+		MakeEntities();
 	}
 }
 
@@ -62,4 +42,28 @@ void FShooterGameEngine::PostSecondTick()
 {
 	// Test print ticks per second
 	//LOG_DEBUG("Game Tick" << " " << GetFramesThisSecond());
+}
+
+void FShooterGameEngine::MakeWidgets()
+{
+	// Add sample 'FMouseSparkWidget' widget
+	GameWindow->GetWidgetManager()->CreateWidget<FMouseSparkWidget>("TestSparkWidget", 100);
+
+	FVerticalBoxWidget* VerticalBoxWidget = GameWindow->GetWidgetManager()->CreateWidget<FVerticalBoxWidget>("TestVerticalBoxWidget");
+	VerticalBoxWidget->SetWidgetLocation({200, 200});
+	VerticalBoxWidget->SetWidgetSize({400, 400});
+
+	FButtonWidget* MainButtonWidget = VerticalBoxWidget->CreateWidget<FButtonWidget>("TestButton");
+	FTextWidget* FirstTextWidget = MainButtonWidget->CreateWidget<FTextWidget>("TextWidget");
+	//MainButtonWidget->SetWidgetSize({ 250, 100 });
+	FButtonWidget* SecondButtonWidget = MainButtonWidget->CreateWidget<FButtonWidget>("TestButton");
+	FTextWidget* TextWidget = SecondButtonWidget->CreateWidget<FTextWidget>("TextWidget");
+
+	FirstTextWidget->SetText("Test button m");
+	TextWidget->SET_TEXT_ADV("Test button " << "s");
+}
+
+void FShooterGameEngine::MakeEntities()
+{
+	FEntityManager* EntityManager = GameWindow->GetEntityManager();
 }
