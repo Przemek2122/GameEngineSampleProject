@@ -9,7 +9,7 @@ extern "C"
 {
 	FEngineManager EngineManager;
 
-	DLLEXPORT int __stdcall StartEngine(const int Argc = 0, char* Argv[] = nullptr) // const int Argc, char* Argv[]
+	DLLEXPORT int __stdcall StartEngine(const int Argc = 0, char* Argv[] = nullptr)
 	{
 		EngineManager.Start<FShooterGameEngine>(Argc, Argv);
 		
