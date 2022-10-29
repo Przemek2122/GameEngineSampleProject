@@ -4,7 +4,7 @@
 
 #include "CoreMinimal.h"
 
-LIBRARY_API class FShooterGameEngine : public FEngine
+class FShooterGameEngine : public FEngine
 {
 	friend FEngineManager;
 

@@ -27,7 +27,6 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Source\dllmain.cpp" />
     <ClCompile Include="Source\GamePCH.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
@@ -37,7 +36,6 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Source\Private\Core\ShooterGameEngine.cpp" />
-    <ClCompile Include="Source\Project.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\GamePCH.h" />
@@ -198,6 +196,12 @@
       <Command>call $(GameEngineDir)\Scripts\BuildActions\PostBuild\CopyDLLs.bat $(GameEngineDir)\Libs\ $(SolutionDir)$(Platform)\$(Configuration)\ x86
 call $(GameEngineDir)\Scripts\BuildActions\PostBuild\CopyAssets.bat $(GameEngineDir)\Assets $(SolutionDir)$(Platform)\$(Configuration)\</Command>
     </PostBuildEvent>
+    <Lib>
+      <AdditionalDependencies>GameEngine.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <PreBuildEvent>
+      <Command>call $(GameEngineDir)\Scripts\BuildActions\PreBuild\GenerateFilesProject.bat $(SolutionDir)</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
     <ClCompile>
@@ -226,6 +230,12 @@ call $(GameEngineDir)\Scripts\BuildActions\PostBuild\CopyAssets.bat $(GameEngine
     <PostBuildEvent>
       <Command>call $(GameEngineDir)\BuildActions\PostBuild\CopyDLLs.bat '$(GameEngineDir)' '$(ProjectDir)' ''</Command>
     </PostBuildEvent>
+    <Lib>
+      <AdditionalDependencies>GameEngine.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <PreBuildEvent>
+      <Command>call $(GameEngineDir)\Scripts\BuildActions\PreBuild\GenerateFilesProject.bat $(SolutionDir)</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -260,6 +270,12 @@ call $(GameEngineDir)\Scripts\BuildActions\PostBuild\CopyAssets.bat $(GameEngine
       <Command>call $(GameEngineDir)\Scripts\BuildActions\PostBuild\CopyDLLs.bat $(GameEngineDir)\Libs\ $(SolutionDir)$(Platform)\$(Configuration)\ x86
 call $(GameEngineDir)\Scripts\BuildActions\PostBuild\CopyAssets.bat $(GameEngineDir)\Assets $(SolutionDir)$(Platform)\$(Configuration)\</Command>
     </PostBuildEvent>
+    <Lib>
+      <AdditionalDependencies>GameEngine.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <PreBuildEvent>
+      <Command>call $(GameEngineDir)\Scripts\BuildActions\PreBuild\GenerateFilesProject.bat $(SolutionDir)</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
     <ClCompile>
@@ -293,6 +309,12 @@ call $(GameEngineDir)\Scripts\BuildActions\PostBuild\CopyAssets.bat $(GameEngine
     <PostBuildEvent>
       <Command>call $(GameEngineDir)\BuildActions\PostBuild\CopyDLLs.bat '$(GameEngineDir)' '$(ProjectDir)' ''</Command>
     </PostBuildEvent>
+    <Lib>
+      <AdditionalDependencies>GameEngine.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <PreBuildEvent>
+      <Command>call $(GameEngineDir)\Scripts\BuildActions\PreBuild\GenerateFilesProject.bat $(SolutionDir)</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -323,6 +345,12 @@ call $(GameEngineDir)\Scripts\BuildActions\PostBuild\CopyAssets.bat $(GameEngine
       <Command>call $(GameEngineDir)\Scripts\BuildActions\PostBuild\CopyDLLs.bat $(GameEngineDir)\Libs\ $(SolutionDir)$(Platform)\$(Configuration)\ x64
 call $(GameEngineDir)\Scripts\BuildActions\PostBuild\CopyAssets.bat $(GameEngineDir)\Assets $(SolutionDir)$(Platform)\$(Configuration)\</Command>
     </PostBuildEvent>
+    <Lib>
+      <AdditionalDependencies>GameEngine.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <PreBuildEvent>
+      <Command>call $(GameEngineDir)\Scripts\BuildActions\PreBuild\GenerateFilesProject.bat $(SolutionDir)</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -363,6 +391,12 @@ call $(GameEngineDir)\Scripts\BuildActions\PostBuild\CopyAssets.bat $(GameEngine
       <Command>call $(GameEngineDir)\Scripts\BuildActions\PostBuild\CopyDLLs.bat $(GameEngineDir)\Libs\ $(SolutionDir)$(Platform)\$(Configuration)\ x64
 call $(GameEngineDir)\Scripts\BuildActions\PostBuild\CopyAssets.bat $(GameEngineDir)\Assets $(SolutionDir)$(Platform)\$(Configuration)\</Command>
     </PostBuildEvent>
+    <Lib>
+      <AdditionalDependencies>GameEngine.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <PreBuildEvent>
+      <Command>call $(GameEngineDir)\Scripts\BuildActions\PreBuild\GenerateFilesProject.bat $(SolutionDir)</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

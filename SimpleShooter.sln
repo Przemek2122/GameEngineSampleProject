@@ -21,9 +21,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Windows", "Windows", "{D4CB367C-A319-4DAB-B6A4-6E601C1FF5B8}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WindowsConsoleProjectApp", "PlatformProjects\Windows\WindowsCPPApp\WindowsConsoleProjectApp.vcxproj", "{9AE4326E-CDC9-40F3-98C9-77848BA8A23D}"
-	ProjectSection(ProjectDependencies) = postProject
-		{44805F8A-1665-4354-98BC-0A532019DA4C} = {44805F8A-1665-4354-98BC-0A532019DA4C}
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

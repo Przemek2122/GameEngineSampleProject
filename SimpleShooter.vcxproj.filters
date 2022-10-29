@@ -18,16 +18,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Source\Project.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
     <ClCompile Include="Source\Private\Core\ShooterGameEngine.cpp">
       <Filter>Source\Private\Core</Filter>
     </ClCompile>
     <ClCompile Include="Source\GamePCH.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\dllmain.cpp">
       <Filter>Source</Filter>
     </ClCompile>
   </ItemGroup>
