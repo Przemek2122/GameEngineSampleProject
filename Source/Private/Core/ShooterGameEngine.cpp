@@ -60,7 +60,7 @@ void FShooterGameEngine::MakeWidgets()
 	FTextWidget* TextWidget = SecondButtonWidget->CreateWidget<FTextWidget>("TextWidget");
 
 	FirstTextWidget->SetText("Test button m");
-	TextWidget->SET_TEXT_ADV("Test button " << "s");
+	//TextWidget->SET_TEXT_ADV("Test button " << "s");
 }
 
 void FShooterGameEngine::MakeEntities()

@@ -108,7 +108,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)Source;$(SolutionDir)Source\Public;$(SolutionDir)Source\Private;$(GameEngineDir)\Source\Public;$(GameEngineDir)\Source\Private;$(GameEngineDir)\Source;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Source;$(SolutionDir)Source\Public;$(SolutionDir)Source\Private;$(GameEngineDir)\Source\Public;$(GameEngineDir)\Source\Private;$(GameEngineDir)\Source;$(GameEngineDir)\Source\Private\Core;$(GameEngineDir)\Source\Public\Core;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <LanguageStandard_C>stdc17</LanguageStandard_C>
     </ClCompile>
@@ -129,7 +129,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)Source;$(SolutionDir)Source\Public;$(SolutionDir)Source\Private;$(GameEngineDir)\Source\Public;$(GameEngineDir)\Source\Private;$(GameEngineDir)\Source;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Source;$(SolutionDir)Source\Public;$(SolutionDir)Source\Private;$(GameEngineDir)\Source\Public;$(GameEngineDir)\Source\Private;$(GameEngineDir)\Source;$(GameEngineDir)\Source\Private\Core;$(GameEngineDir)\Source\Public\Core;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <LanguageStandard_C>stdc17</LanguageStandard_C>
       <Optimization>Full</Optimization>
@@ -153,7 +153,7 @@
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <LanguageStandard_C>stdc17</LanguageStandard_C>
-      <AdditionalIncludeDirectories>$(SolutionDir)Source;$(SolutionDir)Source\Public;$(SolutionDir)Source\Private;$(GameEngineDir)\Source\Public;$(GameEngineDir)\Source\Private;$(GameEngineDir)\Source;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Source;$(SolutionDir)Source\Public;$(SolutionDir)Source\Private;$(GameEngineDir)\Source\Public;$(GameEngineDir)\Source\Private;$(GameEngineDir)\Source;$(GameEngineDir)\Source\Private\Core;$(GameEngineDir)\Source\Public\Core;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -175,7 +175,7 @@
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <LanguageStandard_C>stdc17</LanguageStandard_C>
-      <AdditionalIncludeDirectories>$(SolutionDir)Source;$(SolutionDir)Source\Public;$(SolutionDir)Source\Private;$(GameEngineDir)\Source\Public;$(GameEngineDir)\Source\Private;$(GameEngineDir)\Source;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Source;$(SolutionDir)Source\Public;$(SolutionDir)Source\Private;$(GameEngineDir)\Source\Public;$(GameEngineDir)\Source\Private;$(GameEngineDir)\Source;$(GameEngineDir)\Source\Private\Core;$(GameEngineDir)\Source\Public\Core;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
     </ClCompile>
     <Link>
