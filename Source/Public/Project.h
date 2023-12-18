@@ -15,9 +15,7 @@ inline int StartEngine(const int Argc = 0, char* Argv[] = nullptr) // const int 
 }
 
 // Could be start point to engine if this project was used to produce exe
-/*
 int main(const int Argc, char* Argv[])
 {
-	StartEngine();
+	StartEngine(Argc, Argv);
 }
-*/

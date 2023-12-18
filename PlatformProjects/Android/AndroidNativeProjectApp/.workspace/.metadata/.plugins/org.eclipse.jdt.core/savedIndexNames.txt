@@ -1,3 +1,0 @@
-INDEX VERSION 1.127+E:\Repos\SimpleShooterGame\PlatformProjects\AndroidNativeProjectApp\.workspace\.metadata\.plugins\org.eclipse.jdt.core
-740044279.index
-4094658667.index
