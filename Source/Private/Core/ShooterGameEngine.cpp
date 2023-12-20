@@ -46,6 +46,9 @@ void FShooterGameEngine::PostSecondTick()
 
 void FShooterGameEngine::MakeWidgets()
 {
+	// Add sample 'FMouseSparkWidget' widget
+	GameWindow->GetWidgetManager()->CreateWidget<FMouseSparkWidget>("TestSparkWidget", 100);
+
 	FVerticalBoxWidget* VerticalBoxWidget = GameWindow->GetWidgetManager()->CreateWidget<FVerticalBoxWidget>("TestVerticalBoxWidget");
 	VerticalBoxWidget->SetWidgetLocation({200, 200});
 	VerticalBoxWidget->SetWidgetSize({400, 400});
@@ -59,10 +62,7 @@ void FShooterGameEngine::MakeWidgets()
 
 	FirstTextWidget->SetText("Test button m");
 	TextWidget->SetText("Test button ");
-	//TextWidget->SET_TEXT_ADV("Test button " << "s");
-
-	// Add sample 'FMouseSparkWidget' widget
-	GameWindow->GetWidgetManager()->CreateWidget<FMouseSparkWidget>("TestSparkWidget", 100);
+	TextWidget->SET_TEXT_ADV("Test button " << "s");
 
 }
 
