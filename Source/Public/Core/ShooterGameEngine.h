@@ -4,6 +4,8 @@
 
 #include "CoreMinimal.h"
 
+class FTextWidget;
+
 class FShooterGameEngine : public FEngine
 {
 	friend FEngineManager;
@@ -24,5 +26,6 @@ public:
 
 protected:
 	FWindow* GameWindow;
+	FTextWidget* TextFPSWidget;
 };
 

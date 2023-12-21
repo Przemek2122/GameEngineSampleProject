@@ -10,6 +10,7 @@
 
 FShooterGameEngine::FShooterGameEngine()
 	: GameWindow(nullptr)
+	, TextFPSWidget(nullptr)
 {
 }
 
@@ -42,12 +43,22 @@ void FShooterGameEngine::PostSecondTick()
 {
 	// Test print ticks per second
 	//LOG_DEBUG("Game Tick" << " " << GetFramesThisSecond());
+
+	if (TextFPSWidget != nullptr)
+	{
+		TextFPSWidget->SetText(std::to_string(GetFramesThisSecond()));
+	}
 }
 
 void FShooterGameEngine::MakeWidgets()
 {
 	// Add sample 'FMouseSparkWidget' widget
-	GameWindow->GetWidgetManager()->CreateWidget<FMouseSparkWidget>("TestSparkWidget", 100);
+	FWidgetManager* GameWindowWidgetManager = GameWindow->GetWidgetManager();
+
+	GameWindowWidgetManager->CreateWidget<FMouseSparkWidget>("TestSparkWidget", 100);
+	TextFPSWidget = GameWindowWidgetManager->CreateWidget<FTextWidget>("TextFPS");
+	TextFPSWidget->SetText("FPS");
+	TextFPSWidget->SetAnchor(EAnchor::RightTop);
 
 	FVerticalBoxWidget* VerticalBoxWidget = GameWindow->GetWidgetManager()->CreateWidget<FVerticalBoxWidget>("TestVerticalBoxWidget");
 	VerticalBoxWidget->SetWidgetLocation({200, 200});
