@@ -1,8 +1,16 @@
-// Created by Przemys³aw Wiewióra 2020
+// Created by Przemys³aw Wiewióra 2023
 
-#include "CoreEngine.h"
+#include "GamePCH.h"
 #include "GameMode.h"
 
+FGameMode::FGameMode()
+{
+}
+
 void FGameMode::StartGame()
+{
+}
+
+void FGameMode::EndGame()
 {
 }
