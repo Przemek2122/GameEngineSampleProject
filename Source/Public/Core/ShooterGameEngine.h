@@ -22,7 +22,6 @@ public:
 	void PostSecondTick() override;
 
 	void MakeWidgets();
-	void MakeEntities();
 
 protected:
 	FWindow* GameWindow;

@@ -25,9 +25,15 @@ void FShooterGameEngine::Init()
 	GameWindow = Engine->GetEngineRender()->CreateWindow<FWindow>(TEXT_CHAR("Game window"), 200, 200, 800, 600);
 	if (GameWindow != nullptr)
 	{
+		LOG_DEBUG("Init() started: '" << "MakeWidgets()" << "' starting ...");
+		const size_t Nanosecond_Start = FUtil::GetNanoSeconds();
+
 		MakeWidgets();
 
-		MakeEntities();
+		const size_t Nanosecond_End = FUtil::GetNanoSeconds();
+		const size_t Nanosecond_TestDuration = Nanosecond_End - Nanosecond_Start;
+		const std::string ActualTimeString = std::to_string(FUtil::NanoSecondToSecond<float>(Nanosecond_TestDuration));
+		LOG_DEBUG("MakeWidgets() duration (nanoseconds): " + ActualTimeString + "s.");
 	}
 }
 
@@ -58,23 +64,17 @@ void FShooterGameEngine::MakeWidgets()
 	TextFPSWidget->SetAnchor(EAnchor::RightTop);
 
 	FVerticalBoxWidget* VerticalBoxWidget = GameWindow->GetWidgetManager()->CreateWidget<FVerticalBoxWidget>("TestVerticalBoxWidget");
-	VerticalBoxWidget->SetScaleToContent(true);
-	//VerticalBoxWidget->SetWidgetSize({400, 400});
+	VerticalBoxWidget->SetAnchor(EAnchor::Center);
 
-	FButtonWidget* MainButtonWidget = VerticalBoxWidget->CreateWidget<FButtonWidget>();
-	FTextWidget* FirstTextWidget = MainButtonWidget->CreateWidget<FTextWidget>();
+	FButtonWidget* StartButtonWidget = VerticalBoxWidget->CreateWidget<FButtonWidget>();
+	FTextWidget* StartTextWidget = StartButtonWidget->CreateWidget<FTextWidget>();
+	StartTextWidget->SetText("Start");
+	StartButtonWidget->OnClickPress.BindLambda([this]
+		{
+			LOG_DEBUG("Start requested!");
+		});
 
-	FButtonWidget* SecondButtonWidget = VerticalBoxWidget->CreateWidget<FButtonWidget>();
-	FTextWidget* TextWidget = SecondButtonWidget->CreateWidget<FTextWidget>();
-
-	VerticalBoxWidget->AlignWidgets();
-
-	FirstTextWidget->SetText("Test button mmmjkkjk");
-	TextWidget->SetText("Test button ");
-	//TextWidget->SET_TEXT_ADV("Test button " << "s");
-}
-
-void FShooterGameEngine::MakeEntities()
-{
-	FEntityManager* EntityManager = GameWindow->GetEntityManager();
+	FButtonWidget* ExitButtonWidget = VerticalBoxWidget->CreateWidget<FButtonWidget>();
+	FTextWidget* ExitTextWidget = ExitButtonWidget->CreateWidget<FTextWidget>();
+	ExitTextWidget->SetText("Exit");
 }
