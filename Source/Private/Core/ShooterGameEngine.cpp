@@ -1,4 +1,4 @@
-// Created by Przemys≥aw WiewiÛra 2020-2022 https://github.com/Przemek2122/GameEngine
+// Created by Przemys≈Çaw Wiewi√≥ra 2020-2022 https://github.com/Przemek2122/GameEngine
 
 #include "GamePCH.h"
 #include "Core/ShooterGameEngine.h"
@@ -41,9 +41,6 @@ void FShooterGameEngine::Tick()
 
 void FShooterGameEngine::PostSecondTick()
 {
-	// Test print ticks per second
-	//LOG_DEBUG("Game Tick" << " " << GetFramesThisSecond());
-
 	if (TextFPSWidget != nullptr)
 	{
 		TextFPSWidget->SetText(std::to_string(GetFramesThisSecond()));
@@ -61,20 +58,20 @@ void FShooterGameEngine::MakeWidgets()
 	TextFPSWidget->SetAnchor(EAnchor::RightTop);
 
 	FVerticalBoxWidget* VerticalBoxWidget = GameWindow->GetWidgetManager()->CreateWidget<FVerticalBoxWidget>("TestVerticalBoxWidget");
-	VerticalBoxWidget->SetWidgetLocation({200, 200});
-	VerticalBoxWidget->SetWidgetSize({400, 400});
+	VerticalBoxWidget->SetScaleToContent(true);
+	//VerticalBoxWidget->SetWidgetSize({400, 400});
 
-	FButtonWidget* MainButtonWidget = VerticalBoxWidget->CreateWidget<FButtonWidget>("TestButton");
-	FTextWidget* FirstTextWidget = MainButtonWidget->CreateWidget<FTextWidget>("TextWidget");
+	FButtonWidget* MainButtonWidget = VerticalBoxWidget->CreateWidget<FButtonWidget>();
+	FTextWidget* FirstTextWidget = MainButtonWidget->CreateWidget<FTextWidget>();
 
-	//MainButtonWidget->SetWidgetSize({ 250, 100 });
-	FButtonWidget* SecondButtonWidget = MainButtonWidget->CreateWidget<FButtonWidget>("TestButton");
-	FTextWidget* TextWidget = SecondButtonWidget->CreateWidget<FTextWidget>("TextWidget");
+	FButtonWidget* SecondButtonWidget = VerticalBoxWidget->CreateWidget<FButtonWidget>();
+	FTextWidget* TextWidget = SecondButtonWidget->CreateWidget<FTextWidget>();
 
-	FirstTextWidget->SetText("Test button m");
+	VerticalBoxWidget->AlignWidgets();
+
+	FirstTextWidget->SetText("Test button mmmjkkjk");
 	TextWidget->SetText("Test button ");
-	TextWidget->SET_TEXT_ADV("Test button " << "s");
-
+	//TextWidget->SET_TEXT_ADV("Test button " << "s");
 }
 
 void FShooterGameEngine::MakeEntities()
