@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 
+class FGameMode;
 class FTextWidget;
 
 class FShooterGameEngine : public FEngine
@@ -26,5 +27,6 @@ public:
 protected:
 	FWindow* GameWindow;
 	FTextWidget* TextFPSWidget;
+	FAutoDeletePointer<FGameMode> GameModePtr;
 };
 

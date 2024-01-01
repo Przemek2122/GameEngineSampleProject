@@ -3,6 +3,7 @@
 #include "GamePCH.h"
 #include "Core/ShooterGameEngine.h"
 
+#include "GameMode.h"
 #include "Renderer/Widgets/Samples/ButtonWidget.h"
 #include "Renderer/Widgets/Samples/MouseSparkWidget.h"
 #include "Renderer/Widgets/Samples/TextWidget.h"
@@ -11,6 +12,7 @@
 FShooterGameEngine::FShooterGameEngine()
 	: GameWindow(nullptr)
 	, TextFPSWidget(nullptr)
+	, GameModePtr(FAutoDeletePointer<FGameMode>())
 {
 }
 
@@ -69,12 +71,22 @@ void FShooterGameEngine::MakeWidgets()
 	FButtonWidget* StartButtonWidget = VerticalBoxWidget->CreateWidget<FButtonWidget>();
 	FTextWidget* StartTextWidget = StartButtonWidget->CreateWidget<FTextWidget>();
 	StartTextWidget->SetText("Start");
-	StartButtonWidget->OnClickPress.BindLambda([this]
+	StartButtonWidget->OnClickPress.BindLambda([this, VerticalBoxWidget]
 		{
 			LOG_DEBUG("Start requested!");
+
+			GameWindow->DestroyWidget(VerticalBoxWidget);
+
+			GameModePtr->StartGame();
 		});
 
 	FButtonWidget* ExitButtonWidget = VerticalBoxWidget->CreateWidget<FButtonWidget>();
 	FTextWidget* ExitTextWidget = ExitButtonWidget->CreateWidget<FTextWidget>();
 	ExitTextWidget->SetText("Exit");
+	ExitButtonWidget->OnClickPress.BindLambda([this]
+		{
+			LOG_DEBUG("Exit requested!");
+
+			RequestExit();
+		});
 }
